@@ -188,19 +188,19 @@ article {
 
 .photo {
     padding: 1.5em;
-    padding-bottom: 10em;
+    padding-bottom: 5em;
 
 }
 
 article img {
     width: 250px;
     float: left;
-    padding: 1em;
+    margin: 1em;
 }
 
 .photo p {
     font-size: 1.2em;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-left: 15em;
 }
 
