@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Play&family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4; /* 밝은 배경색 */
+    color: #333; /* 어두운 텍스트 색상 */
+}
+
+/* 헤더 스타일 */
+header {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff; /* 밝은 배경색 */
+    border-bottom: 1px solid #ddd;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 사이드바 스타일 */
+aside {
+    position: fixed;
+    padding-bottom: 150px;
+    top: 75px;
+    left: 0;
+    width: 270px;
+    height: calc(100% - 133px);
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+    /* overflow: hidden; */
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+aside::-webkit-scrollbar {
+    width: 2.5px;
+}
+aside::-webkit-scrollbar-track { 
+    background-color: white;
+}
+aside::-webkit-scrollbar-thumb { 
+    background-color: skyblue;
+}
+aside::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* hover 효과 */
+aside::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(129, 205, 235);
+    transition: all 0.2s; /* 작동 안 됨 */
+}
+
+/* 코너에 라운드 효과 */
+aside::-webkit-scrollbar-track,
+aside::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+.menu-list li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #f0f0f0; /* 약간 밝은 배경색 */
+}
+
+/* 메인 컨텐츠 스타일 */
+main {
+    position: relative;
+    top: 75px;
+    left: 270px;
+    display: flex;
+    justify-content: center;
+    padding-right: 250px;
+    height: calc(100vh - 75px);
+    line-height: 200%;
+    font-family: "Kosugi Maru";
+    /* overflow-y: auto; 제거 */
+}
+
+/*
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track { 
+    background-color: gray;
+}
+body::-webkit-scrollbar-thumb { 
+    background-color: skyblue;
+}
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* hover 효과 */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(129, 205, 235);
+    transition: all 0.2s; /* 작동 안 됨 */
+}
+
+/* 코너에 라운드 효과 */
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+*/
+
+
+body {
+    background-color: #f4f4f4; /* 밝은 배경색 */
+    color: #333; /* 어두운 텍스트 색상 */
+    /* overflow-x: hidden; 유지 또는 제거 */
+}
+
+/* 기사 내용 스타일 */
+article {
+    position: absolute;
+    top: 75px;
+    width: 50%; 
+    padding: 20px; /* 여백 추가 */
+    
+}
+
+.article-title{
+    font-size: 2em;
+    color: #6DB0DD;
+    font-weight: 800;
+}
+
+.qna-item {
+    margin-bottom: 2.5rem;
+}
+
+.photo {
+    padding: 1.5em;
+    padding-bottom: 10em;
+
+}
+
+article img {
+    width: 250px;
+    float: left;
+    padding: 2em;
+}
+
+.photo p {
+    font-size: 1.2em;
+    padding-top: 2em;
+    padding-left: 15em;
+}
+
+.question {
+    padding-left: .75em;
+    font-size: 1.5em;
+    color: #A4CEEA;
+    font-weight: 800;
+}
+
+.answer {
+    margin-top: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 1.5rem;
+    padding-left: .75em;
+    font-size: 1.2em;
+}
+
+
+
+.popo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.popo > img {
+    height: auto;
+    width: 80%;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* 푸터 스타일 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.scroll-to-top {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.scroll-to-top:hover {
+    background: #555;
+}
+
+#tel {
+    color: #666;
+}
+
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+
+    header {
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        border-bottom: 1px solid #ddd;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure space between logo and button */
+        padding: 0 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+  
+      .logo {
+          margin: 0%;
+          padding: 0%;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      aside {
+          padding: 10px;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          align-items: center;
+          margin-top: auto;
+          top: 75px;
+          right: 0; /* Change to right for a right-aligned menu */
+          width: 100%;
+          background: #ffffff;
+          color: #333;
+          padding: 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          display: none;
+      }
+      
+  
+      .menu-list {
+          padding: 2px 8px;
+          width: 100%;
+          align-items: center;
+          text-align: center;
+      }
+  
+      #koumoku {
+          font-size: 15px;
+      }
+  
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  
+    .menu-button {
+      display: block;
+      position: absolute;
+      right: 32px;
+      color: rgb(129, 205, 235);
+    }
+  
+    .menu-list {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .menu-list li {
+      margin: 10px 0;
+    }
+  
+    .menu-list li a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .menu-list li a:hover {
+      background: #f0f0f0;
+    }
+  
+    aside.active {
+      display: block; /* active 클래스가 추가되면 메뉴를 표시 */
+      z-index: 3;
+    }
+  
+
+    .logo {
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    aside {
+        padding: 10px;
+        flex-direction: column;
+        width: 100%;
+        height: 20%;
+        align-items: center;
+    }
+
+    .menu-list {
+        padding: 2px 8px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    main {
+        position: relative;
+        top: 100px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    .photo {
+        padding-left: 10%;
+        padding-bottom: 3em;
+    }
+
+    .article-title {
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+    
+    .question {
+        font-size: 1.0em;
+        font-weight: 800;
+    }
+    
+    .answer {
+        font-size: 1.0em;
+        text-align: left;
+        margin-left: 0em;
+    }
+
+    .popo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .popo > img {
+        height: auto;
+        width: 80%;
+        padding: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    main.active {
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+}

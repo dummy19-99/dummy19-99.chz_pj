@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Play&family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4; /* 밝은 배경색 */
+    color: #333; /* 어두운 텍스트 색상 */
+    overflow-x: hidden;
+}
+
+/* 헤더 스타일 */
+header {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff; /* 밝은 배경색 */
+    border-bottom: 1px solid #ddd;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#bar {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: inherit;
+    color: #333;
+    float: right;
+}
+
+/* 사이드바 스타일 */
+aside {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 75px);
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.menu-button {
+    display: none;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+.menu-list li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #f0f0f0; /* 약간 밝은 배경색 */
+}
+
+main {
+    margin: 0 auto;
+    padding-top: 75px; /* 헤더 공간 확보 */
+}
+
+
+/* 푸터 스타일 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.scroll-to-top {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.scroll-to-top:hover {
+    background: #555;
+}
+
+#tel {
+    color: #666;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+
+    .logo {
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    aside {
+        padding: 10px;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .menu-list {
+        padding: 2px 8px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #bar {
+        display: block;
+        color: #333;
+        float: right;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        font-size: 20px;
+    }
+
+    #webpage {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    #leftcolor, #rightcolor {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    #gulf, #car {
+        position: static;
+        width: 80%;
+    }
+
+    .fab {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}

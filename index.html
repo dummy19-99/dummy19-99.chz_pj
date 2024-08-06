@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢日記</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div id="logo"><a href="#"><img src="pr_img/yumenikki_logo.png" alt="Logo"></a></div>
+        <p>私たちの夢の記録</p>
+        <button class="dream-button" onclick="goToDreamPage()">夢の中へ</button>
+    </div>
+
+    <script>
+        function goToDreamPage() {
+            document.body.classList.add('transitioning');
+            setTimeout(() => {
+                window.location.href = '유메닛키(첫화면).html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

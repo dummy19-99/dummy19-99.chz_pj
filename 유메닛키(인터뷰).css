@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Play&family=Open+Sans:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Play&family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4; /* 밝은 배경색 */
+    color: #333; /* 어두운 텍스트 색상 */
+    overflow-x: hidden;
+}
+
+/* 헤더 스타일 */
+header {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff; /* 밝은 배경색 */
+    border-bottom: 1px solid #ddd;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 사이드바 스타일 */
+aside {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 270px;
+    height: calc(100% - 75px);
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+.menu-list li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #f0f0f0; /* 약간 밝은 배경색 */
+}
+
+/* 컨테이너 스타일 */
+
+/* CSS 파일 */
+
+main {
+    position: relative;
+    top: 75px;
+    left: 270px;
+    align-items: center;
+    font-family: "Kosugi Maru";
+}
+
+/* 전체 컨테이너 스타일 */
+.container {
+    height: auto;
+    width: 83%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; /* 각 포스트 사이에 여백 */
+    padding: 15px;
+    background: #ffffff; /* 밝은 배경색 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    border-radius: 8px; /* 둥근 모서리 */
+    margin-top: 35px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+/* 포스트 컨테이너 스타일 */
+.post-container {
+    background: #f9f9f9; /* 살짝 밝은 배경색 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 포스트 컨테이너 호버 효과 */
+.post-container:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 */
+    transform: translateY(-3px); /* 살짝 떠 있는 효과 */
+}
+
+/* 게시물의 상단 부분 스타일 */
+.published {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 게시물의 상단 부분 링크 스타일 */
+.koumoku a {
+    font-weight: bold;
+    color: #007bff; /* 링크 색상 */
+    text-decoration: none;
+}
+
+.koumoku a:hover {
+    text-decoration: underline;
+}
+
+/* 게시물의 작성자 스타일 */
+.name {
+    font-style: italic;
+    color: #555; /* 텍스트 색상 */
+}
+
+/* 게시물 제목 스타일 */
+.post h1 {
+    font-size: 20px; /* 제목 크기 조정 */
+    color: #333; /* 제목 색상 */
+    margin-bottom: 8px;
+}
+
+/* 게시물 이미지 스타일 */
+.post img {
+    width: 140px;
+    height: 160px;
+    border-radius: 8px; /* 둥근 모서리 */
+    margin-bottom: 8px;
+}
+
+.post {
+    display: flex;
+    flex-direction: row; /* 추가된 부분 */
+    gap: 20px; /* 이미지와 텍스트 간의 간격 추가 */
+}
+
+.box {
+    display: flex;
+    flex-direction: column; /* 텍스트를 세로로 정렬 */
+}
+
+/* 게시물 본문 텍스트 스타일 */
+.post p {
+    color: #666; /* 본문 텍스트 색상 */
+    line-height: 1.5; /* 줄 간격 */
+    font-size: 18px; /* 본문 폰트 크기 조정 */
+}
+
+/* 강조 텍스트 스타일 */
+.explain {
+    font-style: italic;
+    color: #444; /* 강조 텍스트 색상 */
+}
+
+/* 텍스트 블록 스타일 */
+.block1, .block2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* 푸터 스타일 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffffff; /* 밝은 배경색 */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.scroll-to-top {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.scroll-to-top:hover {
+    background: #555;
+}
+
+#tel {
+    color: #666;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+
+    header {
+        height: 75px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        border-bottom: 1px solid #ddd;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure space between logo and button */
+        padding: 0 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+  
+      .logo {
+          margin: 0%;
+          padding: 0%;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      aside {
+          padding: 10px;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          align-items: center;
+          margin-top: auto;
+          top: 75px;
+          right: 0; /* Change to right for a right-aligned menu */
+          width: 100%;
+          background: #ffffff;
+          color: #333;
+          padding: 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          display: none;
+      }
+      
+  
+      .menu-list {
+          padding: 2px 8px;
+          width: 100%;
+          align-items: center;
+          text-align: center;
+      }
+  
+      #koumoku {
+          font-size: 15px;
+      }
+  
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  
+    .menu-button {
+      display: block;
+      position: absolute;
+      right: 32px;
+      color: rgb(129, 205, 235);
+    }
+  
+    .menu-list {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .menu-list li {
+      margin: 10px 0;
+    }
+  
+    .menu-list li a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .menu-list li a:hover {
+      background: #f0f0f0;
+    }
+  
+    aside.active {
+      display: block; /* active 클래스가 추가되면 메뉴를 표시 */
+      z-index: 3;
+    }
+
+    .logo {
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    aside {
+        padding: 10px;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .menu-list {
+        padding: 2px 8px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    main {
+        position: relative;
+        top: 150px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    main.active {
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+
+    .post p {
+        font-size: 14px; /* 본문 폰트 크기 조정 */
+    }
+}
