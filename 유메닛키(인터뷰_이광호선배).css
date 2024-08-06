@@ -407,7 +407,7 @@ footer {
         padding-left: 10%;
         padding-bottom: 3em;
     }
-    
+
     article img {
         width: 150px;
         padding: 0em;
@@ -454,4 +454,23 @@ footer {
         margin-top: 100px;
         padding-top: 100px;
     }
+}
+
+@media (max-width: 480px) {
+
+    .photo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article img {
+        width: 100%;
+        padding: 1em;
+    }
+    
+    .photo p {
+        font-size: 1em;
+        padding-left: 0em;
+    }
+
 }
