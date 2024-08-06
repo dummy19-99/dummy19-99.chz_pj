@@ -404,6 +404,18 @@ footer {
         padding-bottom: 3em;
     }
 
+    article img {
+        width: 150px;
+        padding: 0em;
+    }
+    
+    .photo p {
+        font-size: 1em;
+        padding-top: 0em;
+        padding-left: 10em;
+    }
+
+
     .article-title {
         font-size: 1.2em;
         font-weight: 800;

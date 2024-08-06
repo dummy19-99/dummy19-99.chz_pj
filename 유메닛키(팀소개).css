@@ -363,7 +363,9 @@ footer {
     
     .answer {
         font-size: 1.0em;
-        text-align: left;
+        text-align: center;
+        margin-left: 0px;
+        padding: 1em;
     }
 
     .player {
